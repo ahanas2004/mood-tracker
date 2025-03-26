@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodFlow - Personalized Mood Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-smile"></i> MoodFlow</h1>
+            <p>Track your emotions, discover patterns, and get personalized suggestions</p>
+        </header>
+
+        <main>
+            <section id="mood-tracker">
+                <h2>How are you feeling today?</h2>
+                <div class="mood-options">
+                    <div class="mood-option" data-mood="5">
+                        <i class="fas fa-grin-beam"></i>
+                        <span>Excellent</span>
+                    </div>
+                    <div class="mood-option" data-mood="4">
+                        <i class="fas fa-smile"></i>
+                        <span>Good</span>
+                    </div>
+                    <div class="mood-option" data-mood="3">
+                        <i class="fas fa-meh"></i>
+                        <span>Neutral</span>
+                    </div>
+                    <div class="mood-option" data-mood="2">
+                        <i class="fas fa-frown"></i>
+                        <span>Bad</span>
+                    </div>
+                    <div class="mood-option" data-mood="1">
+                        <i class="fas fa-sad-tear"></i>
+                        <span>Awful</span>
+                    </div>
+                </div>
+
+                <div class="mood-details">
+                    <h3>Tell us more (optional)</h3>
+                    <textarea id="mood-note" placeholder="What's influencing your mood today?"></textarea>
+                    <button id="save-mood">Save Mood</button>
+                </div>
+            </section>
+
+            <section id="suggestions">
+                <h2>Personalized Suggestions</h2>
+                <div class="suggestions-container">
+                    <p class="empty-state">Log your mood to get personalized suggestions</p>
+                    <div class="suggestions-list"></div>
+                </div>
+            </section>
+
+            <section id="history">
+                <h2>Your Mood History</h2>
+                <div class="chart-container">
+                    <canvas id="mood-chart"></canvas>
+                </div>
+                <div class="mood-entries"></div>
+            </section>
+            
+            <!-- Added YouTube Music Player Section -->
+            <section id="music-player">
+                <h2>Mood-Boosting Music</h2>
+                <div class="music-container">
+                    <iframe 
+                        width="100%" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=0" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <div class="music-controls">
+                        <p>Listen to relaxing lo-fi music to improve your mood</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 MoodFlow | Personalized Mood Tracking</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
