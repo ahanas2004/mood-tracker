@@ -53,7 +53,10 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 
-  // Update UI with new mood entry
+  /**
+   * Updates the UI with a new mood entry.
+   * @param {Object} moodData - The saved mood data.
+   */
   function updateUI(moodData) {
       // Add to suggestions
       emptyState.style.display = 'none';
@@ -67,7 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
       updateChart();
   }
 
-  // Reset form after submission
+  /**
+   * Resets the mood selection form.
+   */
   function resetForm() {
       moodOptions.forEach(opt => opt.classList.remove('selected'));
       moodNote.value = '';
