@@ -7,10 +7,10 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
-app.use(express.json());
-app.use(cors());
-app.use(express.static(path.join(__dirname, 'public')));
+// Middleware Configuration
+app.use(express.json()); // Parse JSON request bodies
+app.use(cors()); // Enable CORS
+app.use(express.static(path.join(__dirname, 'public'))); // Serve static assets
 
 // In-memory "database" (replace with real DB in production)
 let moodsDB = [];
